@@ -17,7 +17,7 @@ assign blinking_en  = (state == green_blinking) |
 always @(posedge clk) begin
   if (blinking_en = '1') then
   ... // опустим описание
-end;
+end
 
 assign green  = green_light & blink;
 assign yellow = yellow_light & blink;

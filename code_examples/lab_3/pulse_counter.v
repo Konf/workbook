@@ -8,16 +8,16 @@ wire hundredth_of_second_passed =
 //описание счётчика
 always @(posedge clk or posedge reset) begin
    // асинхронный сброс
-   if (reset) pulse_counter <= 0;
+  if (reset) pulse_counter <= 0;
 
    // сигнал разрешения работы счётчика
-   else if (device_running |
+  else if (device_running |
               hundredth_of_second_passed)
 
        // синхронный сброс по достижению максимума
-       if (hundredth_of_second_passed)
-              pulse_counter <= 0;
+      if (hundredth_of_second_passed)
+        pulse_counter <= 0;
 
        // увеличение счётчика на единицу
-       else pulse_counter <= pulse_counter + 1;
-end;
+      else pulse_counter <= pulse_counter + 1;
+end

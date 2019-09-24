@@ -1,7 +1,7 @@
 module xor_gate(
-	input  a,
-	input  b,
-	output result)
+  input  a,
+  input  b,
+  output result);
 
 assign result = a ^ b;
 

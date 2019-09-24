@@ -8,13 +8,12 @@ module decoder(
 
 always @(a,b,c,d,s) begin
   case (s)
-    3'b00:   y <= a;
-    3'b01:   y <= b;
-    3'b10:   y <= c;
-    3'b11:   y <= d;
+    2'b00:   y <= a;
+    2'b01:   y <= b;
+    2'b10:   y <= c;
+    2'b11:   y <= d;
     default: y <= a;
   endcase
 end
 
-endmodule;
-
+endmodule

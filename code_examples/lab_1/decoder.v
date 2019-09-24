@@ -18,5 +18,4 @@ end
 
 assign y = decoder_output;
 
-endmodule;
-
+endmodule

@@ -12,8 +12,7 @@ reg [2:0] state, next_state;
 always @(posedge clk or posedge rst) begin
   if (rst) state <= yellow_blinking;
   else     state <= next_state;
-  end if;
-end;
+end
 
 always @(*) begin
   if (end_work) next_state <= yellow_blinking;
@@ -33,8 +32,8 @@ always @(*) begin
         next_state <= green;
       others: 
         next_state <= yellow_blinking;
-    endcase;
-  end;
-end;
+    endcase
+  end
+end
 
 ...

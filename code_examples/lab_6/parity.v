@@ -6,11 +6,10 @@ function parity_calc;
 
   always @(negedge ps2_clk or posedge areset) begin
     if(areset)
-	   valid_data <= 1'b0;
-	 else
+	    valid_data <= 1'b0;
+	  else
 		if (ps2_dat && 
-		    parity_calc(shift_reg[7:0]) == 
-			shift_reg[8] && 
+		    parity_calc(shift_reg[7:0]) == shift_reg[8] && 
 		    state == CHECK_PARITY_STOP_BITS)
 	        valid_data <= 1'b1;
 		else

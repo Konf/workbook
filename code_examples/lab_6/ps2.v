@@ -26,14 +26,14 @@ localparam CHECK_PARITY_STOP_BITS = 2'd2;
   
   always @(negedge ps2_clk or posedge areset)
   if(areset)
-	 state <= IDLE;
+	  state <= IDLE;
   else
   begin
 	 case (state)
 	 IDLE:
 		begin
-		    if(!ps2_dat)
-			   state = RECEIVE_DATA;
+		  if(!ps2_dat)
+			  state = RECEIVE_DATA;
 		end
 	 RECEIVE_DATA:
 		begin
@@ -43,7 +43,7 @@ localparam CHECK_PARITY_STOP_BITS = 2'd2;
 		end
 	 CHECK_PARITY_STOP_BITS:
 		begin
-		   state = IDLE;	
+		  state = IDLE;	
 		end 	
 	default:
 		begin
@@ -54,7 +54,7 @@ end
 
   always @(negedge ps2_clk or posedge areset) begin
     if(areset)
-	   valid_data <= 1'b0;
+	    valid_data <= 1'b0;
 	 else
 		if (ps2_dat && 
 		    parity_calc(shift_reg[7:0]) == 
@@ -67,8 +67,8 @@ end
 
   always @(negedge ps2_clk or posedge areset) begin
     if(areset)
-	   shift_reg <= 9'b0;
-	 else
+	    shift_reg <= 9'b0;
+	  else
 		if(state == RECEIVE_DATA)
 	        shift_reg <= 
 			{ps2_dat, shift_reg[8:1]};
@@ -76,12 +76,12 @@ end
  
   always @(negedge ps2_clk or posedge areset) begin
     if(areset)
-	   count_bit <= 4'b0;
+	    count_bit <= 4'b0;
 	 else
 		if(state == RECEIVE_DATA)
-	        count_bit <= count_bit + 4'b1;
+	    count_bit <= count_bit + 4'b1;
 		else
-	        count_bit <= 4'b0;
+	    count_bit <= 4'b0;
   end  
 
 endmodule

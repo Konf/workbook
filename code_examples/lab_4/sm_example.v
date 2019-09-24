@@ -13,7 +13,7 @@ reg [2:0] state, next_state;
 always @(posedge clk or posedge rst) begin
   if (rst) state <= idle;
   else state <= next_state;
-end;
+end
 
 always @(*) begin
     case (state)
@@ -51,7 +51,7 @@ always @(*) begin
           next_state <= error;
 
       others: next_state <= error;
-    endcase;
-end;
+    endcase
+end
 
 ...
