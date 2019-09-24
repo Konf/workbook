@@ -19,6 +19,7 @@ always @(posedge clk) begin
   ... // опустим описание
 end
 
+
 assign green  = green_light & blink;
 assign yellow = yellow_light & blink;
 
