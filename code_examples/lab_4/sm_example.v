@@ -15,6 +15,7 @@ always @(posedge clk or posedge rst) begin
   else state <= next_state;
 end
 
+
 always @(*) begin
     case (state)
       idle:
@@ -53,5 +54,6 @@ always @(*) begin
       others: next_state <= error;
     endcase
 end
+
 
 ...

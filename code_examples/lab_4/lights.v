@@ -14,6 +14,7 @@ always @(posedge clk or posedge rst) begin
   else     state <= next_state;
 end
 
+
 always @(*) begin
   if (end_work) next_state <= yellow_blinking;
   else begin
@@ -35,5 +36,6 @@ always @(*) begin
     endcase
   end
 end
+
 
 ...
