@@ -305,6 +305,268 @@
 \item{Ответьте на вопросы к защите лабораторной работы.}
 \end{enumerate}
 
+
+\begin{figure}[H]
+  \centering
+  \def\svgwidth{\columnwidth}
+  \includesvg{images/lab_4/graph_2}
+  \caption{Пример задания лабораторной работы}
+\end{figure}
+
+
+\clearpage
+\section{Варианты индивидуальных заданий}
+
+
+\begin{enumerate}
+  
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (2) edge [bend left]   node {$a$} (3);
+      \path (3) edge    node {$b$} (1);
+      \path (1) edge    node {$c$} (2);
+      \path (3) edge  [bend left]  node {$a$} (4);
+      \path (4) edge  [bend left]  node {$b$} (3);
+      \path (3) edge  [bend left]  node {$c$} (2);
+
+    \end{tikzpicture}
+
+  }
+
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (2) edge  [bend left]  node {$a$} (1);
+      \path (4) edge    node {$b$} (2);
+      \path (1) edge  [bend left]  node {$c$} (2);
+      \path (4) edge  [bend left]  node {$a$} (3);
+      \path (4) edge    node {$c$} (1);
+      \path (3) edge  [bend left]  node {$b$} (4);
+
+    \end{tikzpicture}
+
+  }
+
+  \clearpage
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (1) edge  [bend left]  node {$a$} (4);
+      \path (3) edge  [bend left]  node {$b$} (2);
+      \path (2) edge  [bend left]  node {$c$} (3);
+      \path (4) edge  [bend left]  node {$a$} (1);
+      \path (3) edge    node {$c$} (1);
+      \path (4) edge    node {$b$} (3);
+
+    \end{tikzpicture}
+
+  }
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (3) edge    node {$a$} (1);
+      \path (3) edge  [bend left]  node {$b$} (2);
+      \path (1) edge  [bend left]  node {$c$} (4);
+      \path (2) edge  [bend left]  node {$a$} (3);
+      \path (4) edge  [bend left]  node {$c$} (1);
+      \path (1) edge    node {$b$} (2);
+
+    \end{tikzpicture}
+
+  }
+
+  \clearpage
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (2) edge  [bend left]  node {$a$} (3);
+      \path (3) edge  [bend left]  node {$b$} (4);
+      \path (2) edge    node {$c$} (1);
+      \path (4) edge  [bend left]  node {$a$} (3);
+      \path (3) edge  [bend left]  node {$c$} (2);
+      \path (1) edge    node {$b$} (3);
+
+    \end{tikzpicture}
+
+  }
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (3) edge    node {$a$} (4);
+      \path (1) edge    node {$b$} (2);
+      \path (1) edge  [bend left]  node {$c$} (3);
+      \path (2) edge    node {$a$} (3);
+      \path (3) edge  [bend left]  node {$c$} (1);
+      \path (4) edge    node {$b$} (1);
+
+    \end{tikzpicture}
+
+  }
+
+
+  \clearpage
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (3) edge    node {$a$} (4);
+      \path (2) edge    node {$b$} (3);
+      \path (1) edge  [bend left]  node {$b$} (4);
+      \path (2) edge    node {$a$} (1);
+      \path (1) edge    node {$c$} (3);
+      \path (4) edge  [bend left]  node {$c$} (1);
+
+    \end{tikzpicture}
+
+  }
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (1) edge    node {$a$} (3);
+      \path (3) edge  [bend left]  node {$b$} (4);
+      \path (3) edge    node {$c$} (2);
+      \path (2) edge  [bend left]  node {$a$} (1);
+      \path (4) edge  [bend left]  node {$c$} (3);
+      \path (1) edge  [bend left]  node {$b$} (2);
+
+    \end{tikzpicture}
+
+  }
+
+
+  \clearpage
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (1) edge    node {$a$} (2);
+      \path (1) edge    node {$b$} (3);
+      \path (4) edge  [bend left]  node {$c$} (3);
+      \path (4) edge    node {$a$} (1);
+      \path (2) edge    node {$c$} (3);
+      \path (3) edge  [bend left]  node {$b$} (4);
+
+    \end{tikzpicture}
+
+  }
+
+  \item{
+
+    Граф конечного автомата:\\
+
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3.5cm,
+            scale = 1.2,transform shape]
+
+      \node[state] (1)              {$1$};
+      \node[state] (2) [right of=1] {$2$};
+      \node[state] (3) [below of=2] {$3$};
+      \node[state] (4) [below of=1] {$4$};
+
+      \path (3) edge    node {$a$} (1);
+      \path (4) edge  [bend left]  node {$b$} (1);
+      \path (3) edge    node {$c$} (4);
+      \path (3) edge    node {$a$} (2);
+      \path (1) edge  [bend left]  node {$c$} (4);
+      \path (1) edge    node {$b$} (2);
+
+    \end{tikzpicture}
+
+  }
+
+
+\end{enumerate}
+
+\clearpage
+
 \section{Вопросы к защите лабораторной работы}
 
 \begin{enumerate}[noitemsep,topsep=0pt, after=\vspace{2pt}]
@@ -316,9 +578,4 @@
   \item{Почему для верного функционирования конечного автомата важна длительность управляющих сигналов?}
   \item{Изучите рисунок структуры цифрового устройства на стр.10. Назовите значение состояния автомата, анализируемое каждым из компараторов.}
 
-\begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includesvg{images/lab_4/graph_2}
-	\caption{Пример задания лабораторной работы}
-\end{figure}
+\end{enumerate}
