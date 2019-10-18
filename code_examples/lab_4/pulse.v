@@ -15,7 +15,7 @@ assign blinking_en  = (state == green_blinking) |
 //код, описывающий поведение схемы пульсации
 //выход схемы – сигнал blink
 always @(posedge clk) begin
-  if (blinking_en = '1') then
+  if (blinking_en = 1) then
   ... // опустим описание
 end
 

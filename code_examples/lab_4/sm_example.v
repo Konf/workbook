@@ -1,57 +1,52 @@
 ...
 
-localparam idle = 3'b000;
-localparam calc_checksum = 3'b001;
-localparam send_data = 3'b010;
-localparam wait_answer = 3'b011;
-localparam analyse_answer = 3'b100;
-localparam try_second_time = 3'b101;
-localparam error = 3'b110;
+localparam IDLE = 3'b000;
+localparam CALC_CHECKSUM = 3'b001;
+localparam SEND_DATA = 3'b010;
+localparam WAIT_ANSWER = 3'b011;
+localparam ANALYSE_ANSWER = 3'b100;
+localparam TRY_SECOND_TIME = 3'b101;
+localparam ERROR = 3'b110;
 
-reg [2:0] state, next_state;
+reg [2:0] state;
+
 
 always @(posedge clk or posedge rst) begin
-  if (rst) state <= idle;
-  else state <= next_state;
-end
-
-
-always @(*) begin
     case (state)
-      idle:
+      IDLE:
         if (new_data) 
-          next_state <= calc_cheksum;
+          state <= calc_cheksum;
 
       calc_cheksum:
         if (checksum_calc_complete)
-          next_state <= send_data;
+          state <= SEND_DATA;
     
-      send_data:
-        next_state <= wait_answer;
+      SEND_DATA:
+        state <= WAIT_ANSWER;
       
-      wait_answer:
+      WAIT_ANSWER:
         if (answer_recived)
-          next_state <= analyse_answer;
+          state <= ANALYSE_ANSWER;
         else if (wait_too_long)
-          next_state <= try_second_time;
+          state <= TRY_SECOND_TIME;
       
-      analyse_answer:
+      ANALYSE_ANSWER:
         if (answer_is_ok)
-          next_state <= idle;
+          state <= IDLE;
         else
-          next_state <= try_second_time;
+          state <= TRY_SECOND_TIME;
       
-      try_second_time:
+      TRY_SECOND_TIME:
         if (already_tried)
-          next_state <= error;
+          state <= ERROR;
         else
-          next_state <= send_data;
+          state <= SEND_DATA;
       
-      error:
+      ERROR:
         if (reset_error)
-          next_state <= error;
+          state <= ERROR;
 
-      others: next_state <= error;
+      default: state <= ERROR;
     endcase
 end
 
