@@ -15,25 +15,24 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics [width=1\textwidth] {images/lab_7/discrete.png}
-	\caption{.}
+	\includegraphics [width=0.7\textwidth] {images/lab_7/analog.png}
+	\caption{Форма волны аналогового сигнала.}
 	\label{lab7:pic1}
 \end{figure}
 
 
-
 \begin{figure}[H]
 	\centering
-	\includegraphics [width=1\textwidth] {images/lab_7/analog.png}
-	\caption{.}
+	\includegraphics [width=0.7\textwidth] {images/lab_7/discrete.png}
+	\caption{Форма волны дискретного сигнала.}
 	\label{lab7:pic2}
 \end{figure}
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics [width=1\textwidth] {images/lab_7/digital.png}
-	\caption{.}
+	\includegraphics [width=0.7\textwidth] {images/lab_7/digital.png}
+	\caption{Форма фолны цифрового сигнала (дискретного и квантованного).}
 	\label{lab7:pic3}
 \end{figure}
 
@@ -83,7 +82,7 @@ $$ S = \frac{T}{\tau} $$
 \begin{figure}[H]
 	\centering
 	\includegraphics [width=1\textwidth] {images/lab_7/duty_cycle.png}
-	\caption{.}
+	\caption{Скважность прямоугольного сигнала.}
 	\label{lab7:pic4}
 \end{figure}
 
@@ -92,7 +91,7 @@ $$ S = \frac{T}{\tau} $$
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=1, lastline=11]{code_examples/lab_7/square_code.v}
+	\lstinputlisting[language=Verilog, firstline=1, lastline=11]{code_examples/lab_7/square_code.v}
 \end{minipage}
 
 \begin{itemize}
@@ -108,7 +107,7 @@ $$ S = \frac{T}{\tau} $$
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=12, lastline=22]{code_examples/lab_7/square_code.v}
+	\lstinputlisting[language=Verilog, firstline=12, lastline=22]{code_examples/lab_7/square_code.v}
 \end{minipage}
 
 Для хранения непосредственно генерируемой прямоугольной волны добавим одноразрядный регистр square.
@@ -116,21 +115,21 @@ $$ S = \frac{T}{\tau} $$
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=24, lastline=33]{code_examples/lab_7/square_code.v}
+	\lstinputlisting[language=Verilog, firstline=24, lastline=33]{code_examples/lab_7/square_code.v}
 \end{minipage}
 
 Сформируем выходной сигнал модуля. В случае, если сигналы square и \textit{enable} имеют активный уровень, на выход подаётся значение громкости. В противном случае -- нуль.
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=35, lastline=36]{code_examples/lab_7/square_code.v}
+	\lstinputlisting[language=Verilog, firstline=35, lastline=36]{code_examples/lab_7/square_code.v}
 \end{minipage}
 
 Ниже приведён полный код модуля.
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog]{code_examples/lab_7/square_code.v}
+	\lstinputlisting[caption={Код модуля генерации сигнала прямоугольной формы.}, language=Verilog]{code_examples/lab_7/square_code.v}
 \end{minipage}
 
 
@@ -139,7 +138,7 @@ $$ S = \frac{T}{\tau} $$
 \begin{figure}[H]
 	\centering
 	\includegraphics [width=1\textwidth] {images/lab_7/square_simulate.PNG}
-	\caption{.}
+	\caption{Временная диаграмма работы модуля генерации сигнала прямоугольной формы.}
 	\label{lab7:pic5}
 \end{figure}
 
@@ -158,7 +157,7 @@ $$ S = \frac{\textit{full\_period} + 1}{\textit{active\_period} + 1} $$
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=1, lastline=11]{code_examples/lab_7/square_duty_cycle.v}
+	\lstinputlisting[language=Verilog, firstline=1, lastline=11]{code_examples/lab_7/square_duty_cycle.v}
 \end{minipage}
 
 
@@ -166,7 +165,7 @@ Verilog-описание счётчика остаётся неизменным,
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=13, lastline=23]{code_examples/lab_7/square_duty_cycle.v}
+	\lstinputlisting[language=Verilog, firstline=13, lastline=23]{code_examples/lab_7/square_duty_cycle.v}
 \end{minipage}
 
 
@@ -178,7 +177,7 @@ Verilog-описание счётчика остаётся неизменным,
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog, firstline=25, lastline=36]{code_examples/lab_7/square_duty_cycle.v}
+	\lstinputlisting[language=Verilog, firstline=25, lastline=36]{code_examples/lab_7/square_duty_cycle.v}
 \end{minipage}
 
 На рисунке \ref{lab7:pic6} показана временная диаграмма работы модуля.
@@ -186,7 +185,7 @@ Verilog-описание счётчика остаётся неизменным,
 \begin{figure}[H]
 	\centering
 	\includegraphics [width=1\textwidth] {images/lab_7/square_simulate2.PNG}
-	\caption{.}
+	\caption{Временная диаграмма работы модуля генерации сигнала прямоугольной формы с изменяемой скважностью.}
 	\label{lab7:pic6}
 \end{figure}
 
@@ -195,7 +194,7 @@ Verilog-описание счётчика остаётся неизменным,
 
 \noindent
 \begin{minipage}{\linewidth}
-	\lstinputlisting[caption={.}, language=Verilog]{code_examples/lab_7/square_duty_cycle.v}
+	\lstinputlisting[caption={Код модуля генерации сигнала прямоугольной формы с изменяемой скважностью.}, language=Verilog]{code_examples/lab_7/square_duty_cycle.v}
 \end{minipage}
 
 
@@ -207,12 +206,94 @@ Verilog-описание счётчика остаётся неизменным,
 
 В данной лабораторной работе вам будет предоставлен проект DE1\_Audio, содержащий всю логику, необходимую для работы с кодеком.
 
-На рисунке № показана структурная схема проекта.
+На рисунке \ref{lab7:pic7} показана структурная схема проекта DE1\_Audio.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics [width=1\textwidth] {images/lab_7/DE1_Audio.pdf}
+	\caption{Структурная схема проекта DE1\_Audio.}
+	\label{lab7:pic7}
+\end{figure}
+
+Проект состоит из следующих модулей:
+\begin{enumerate}
+	\item Audio\_PLL -- преобразователь частоты на основе ФАПЧ (фазовой автоподстройки частоты). Преобразует частоту входного сигнала \textit{CLOCK\_27} (27 МГц) в сигнал с частотой 18.4 МГц для нужд аудиокодека.
+	\item I2C\_AV\_CONFIG -- модуль, производящий первоначальную конфигурацию аудиокодека после подачи сигнала сброса или при загрузке прошивки в ПЛИС.
+	\item Audio\_0 -- модуль, включающий в себя логику управления аудиокодеком. Также включает в себя буферное асинхронное FIFO AUDIO\_DAC\_FIFO, предназначенное для выравнивания плотности потока данных и перехода данных из одной тактовой частоты в другую.
+	\item Модуль Генерации звука -- модуль, создать который предстоит вам в рамках лабораторной работы. Он должен содержать контроллер PS/2, генератор звуковой волны и управляющий конечный автомат.
+
+\end{enumerate}
+
+Обратите внимание на то, что логика генерации звука должна тактироваться от частоты в 50 МГц.
+
+
+
+Для подключения генератора звука к модулю Audio\_0 используются два порта:
+\begin{itemize}
+	\item \textit{iDATA} -- порт данных (входной относительно Audio\_0) разрядностью 16 бит. В этот порт подаётся поток отчетов звука для дальнейшего преобразования в ЦАП аудиокодека. Обратите внимание, что данные передаются в знаковом формате и старший разряд используется для представления знака. Рекомендуется использувать младшие 15 бит порта.
+	\item \textit{iWR} -- порт разрешения на запись данных. Фактически предсавляет из себя сигнал \textit{write\_enable} для AUDIO\_DAC\_FIFO. При наличии этого сигнала FIFO захватит один отчет данных \textit{iDATA}.
+
+\end{itemize}
+
+
+Доработаем логику генератора прямоугольной волны без изменяемой скважности, чтобы он генерировал сигнал \textit{iWR}.
+
+
+%\noindent
+%\begin{minipage}{\linewidth}
+	\lstinputlisting[caption={Описание модуля генерации прямоугольной волны без изменяемой скважности с сигналом wr.}, language=Verilog]{code_examples/lab_7/square_code_wr.v}
+%\end{minipage}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics [width=1\textwidth] {images/lab_7/square_simulate3.png}
+	\caption{Результат моделирования логики генератора прямоугольной волны без изменяемой скважности с сигналом wr.}
+	\label{lab7:pic7}
+\end{figure}
 
 \section{Задание лабораторной работы}
 
+Лабораторная работа состоит из двух частей: основной и дополнительной. Задание основной части общее для всех групп и приведено ниже.
+
+\begin{enumerate}
+	\item Спроектировать устройство -- музыкальный синтезатор. Синтезатор должен воспроизводить одну из семи нот определенной октавы (согласно варианту) при нажатии на соответствующую цифровую клавишу 1-7 клавиатуры. Форма сигнала -- прямоугольная.
+	\item В виду сложности и больших временных затрат на моделирование дизайна целиком, необходимо предоставить результат моделирования только вашего блока.
+	\item Ответить на контрольные вопросы.
+\end{enumerate}
+
+
+
+Вторая часть задания будет выдана непосредственно на лабораторной работе и, с целью исключения обмена исходными кодами, индивидуальна для каждой группы.
+
+\section{Распределение баллов за лабораторную работу}
+
+За основную часть лабораторной работы предполагается начисление максимум 6 баллов.
+
+\begin{enumerate}
+\item Посещение
+\item Ответы на контрольные вопросы
+\item Частично выполненный код лабораторной работы.
+\item Полностью выполненный код лабораторной работы
+\item Моделирование основной части задания.
+\item Полностью работающий проект с основной частью задания.
+
+\end{enumerate}
+
+За дополнительную часть студент может получить от 0 до 8 баллов на усмотрение преподавателя.
+
+С целью экономии времени, студент вправе начать работу сразу над дополнительной частью, минуя основную. По мере выполнения дополнительной части, студент автоматически получит баллы за основную часть.
 
 \section{Контрольные вопросы}
 
+\begin{enumerate}
+\item Что такое цифровой звук?
+\item Что такое дискретизация?
+\item Что такое частота дискретизации?
+\item Сформулируйте теорему Котельникова (Найквиста — Шеннона).
+\item Что такое квантование?
+\item Какие основные формы звукового сигнала вы можете назвать?
+\item Как можно синтезировать прямоугольный сигнал?
+\item Что такое скважность сигнала?
+\end{enumerate}
 
-\section{Распределение баллов за лабораторную работу}
