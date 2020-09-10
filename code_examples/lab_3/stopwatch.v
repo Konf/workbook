@@ -99,16 +99,16 @@ end
 reg [6:0] decoder_ten_seconds;
 always @(*) begin
   case (ten_seconds_counter)
-      4'd0:    decoder_ten_seconds =  7'b0000001;
-      4'd1:    decoder_ten_seconds =  7'b1001111;
-      4'd2:    decoder_ten_seconds =  7'b0010010;
-      4'd3:    decoder_ten_seconds =  7'b0000110;
-      4'd4:    decoder_ten_seconds =  7'b1001100;
-      4'd5:    decoder_ten_seconds =  7'b0100100;
-      4'd6:    decoder_ten_seconds =  7'b0100000;
-      4'd7:    decoder_ten_seconds =  7'b0001111;
+      4'd0:    decoder_ten_seconds =  7'b1000000;
+      4'd1:    decoder_ten_seconds =  7'b1111001;
+      4'd2:    decoder_ten_seconds =  7'b0100100;
+      4'd3:    decoder_ten_seconds =  7'b0110000;
+      4'd4:    decoder_ten_seconds =  7'b0011001;
+      4'd5:    decoder_ten_seconds =  7'b0010010;
+      4'd6:    decoder_ten_seconds =  7'b0000010;
+      4'd7:    decoder_ten_seconds =  7'b1111000;
       4'd8:    decoder_ten_seconds =  7'b0000000;
-      4'd9:    decoder_ten_seconds =  7'b0000100;
+      4'd9:    decoder_ten_seconds =  7'b0010000;
       default: decoder_ten_seconds =  7'b1111111;
   endcase
 end
@@ -118,16 +118,16 @@ assign hex3 = decoder_ten_seconds;
 reg [6:0] decoder_seconds;
 always @(*) begin
   case (seconds_counter)
-      4'd0:    decoder_seconds =  7'b0000001;
-      4'd1:    decoder_seconds =  7'b1001111;
-      4'd2:    decoder_seconds =  7'b0010010;
-      4'd3:    decoder_seconds =  7'b0000110;
-      4'd4:    decoder_seconds =  7'b1001100;
-      4'd5:    decoder_seconds =  7'b0100100;
-      4'd6:    decoder_seconds =  7'b0100000;
-      4'd7:    decoder_seconds =  7'b0001111;
+      4'd0:    decoder_seconds =  7'b1000000;
+      4'd1:    decoder_seconds =  7'b1111001;
+      4'd2:    decoder_seconds =  7'b0100100;
+      4'd3:    decoder_seconds =  7'b0110000;
+      4'd4:    decoder_seconds =  7'b0011001;
+      4'd5:    decoder_seconds =  7'b0010010;
+      4'd6:    decoder_seconds =  7'b0000010;
+      4'd7:    decoder_seconds =  7'b1111000;
       4'd8:    decoder_seconds =  7'b0000000;
-      4'd9:    decoder_seconds =  7'b0000100;
+      4'd9:    decoder_seconds =  7'b0010000;
       default: decoder_seconds =  7'b1111111;
    endcase
 end
@@ -137,17 +137,17 @@ assign hex2 = decoder_seconds;
 reg [6:0] decoder_tenths;
 always @(*) begin
   case (tenths_counter)
-      4'd0:    decoder_tenths = 7'b0000000;
-      4'd1:    decoder_tenths = 7'b1001111;
-      4'd2:    decoder_tenths = 7'b0010010;
-      4'd3:    decoder_tenths = 7'b0000110;
-      4'd4:    decoder_tenths = 7'b1001100;
-      4'd5:    decoder_tenths = 7'b0100100;
-      4'd6:    decoder_tenths = 7'b0100000;
-      4'd7:    decoder_tenths = 7'b0001111;
-      4'd8:    decoder_tenths = 7'b0000000;
-      4'd9:    decoder_tenths = 7'b0000100;
-      default: decoder_tenths = 7'b1111111;
+      4'd0:    decoder_tenths =  7'b1000000;
+      4'd1:    decoder_tenths =  7'b1111001;
+      4'd2:    decoder_tenths =  7'b0100100;
+      4'd3:    decoder_tenths =  7'b0110000;
+      4'd4:    decoder_tenths =  7'b0011001;
+      4'd5:    decoder_tenths =  7'b0010010;
+      4'd6:    decoder_tenths =  7'b0000010;
+      4'd7:    decoder_tenths =  7'b1111000;
+      4'd8:    decoder_tenths =  7'b0000000;
+      4'd9:    decoder_tenths =  7'b0010000;
+      default: decoder_tenths =  7'b1111111;
    endcase
 end
 
@@ -156,17 +156,17 @@ assign hex1 = decoder_tenths;
 reg [6:0] decoder_hundredths;
 always @(*) begin
   case (hundredths_counter)
-      4'd0:    decoder_hundredths = 7'b0000000;
-      4'd1:    decoder_hundredths = 7'b1001111;
-      4'd2:    decoder_hundredths = 7'b0010010;
-      4'd3:    decoder_hundredths = 7'b0000110;
-      4'd4:    decoder_hundredths = 7'b1001100;
-      4'd5:    decoder_hundredths = 7'b0100100;
-      4'd6:    decoder_hundredths = 7'b0100000;
-      4'd7:    decoder_hundredths = 7'b0001111;
-      4'd8:    decoder_hundredths = 7'b0000000;
-      4'd9:    decoder_hundredths = 7'b0000100;
-      default: decoder_hundredths = 7'b1111111;
+      4'd0:    decoder_hundredths =  7'b1000000;
+      4'd1:    decoder_hundredths =  7'b1111001;
+      4'd2:    decoder_hundredths =  7'b0100100;
+      4'd3:    decoder_hundredths =  7'b0110000;
+      4'd4:    decoder_hundredths =  7'b0011001;
+      4'd5:    decoder_hundredths =  7'b0010010;
+      4'd6:    decoder_hundredths =  7'b0000010;
+      4'd7:    decoder_hundredths =  7'b1111000;
+      4'd8:    decoder_hundredths =  7'b0000000;
+      4'd9:    decoder_hundredths =  7'b0010000;
+      default: decoder_hundredths =  7'b1111111;
   endcase
 end
 
