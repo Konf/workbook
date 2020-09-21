@@ -1,4 +1,4 @@
-module d_latch_beahv(
+module d_latch_behav(
   input d,
   input en,
   output reg q);
