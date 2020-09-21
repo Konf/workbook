@@ -1,4 +1,4 @@
-module function(
+module func(
   input x0,
   input x1,
   input x2,
