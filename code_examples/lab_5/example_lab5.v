@@ -1,4 +1,4 @@
-module example_lab6 (
+module example_lab5 (
   input clk,
   input rst,
   input [7:0] data,

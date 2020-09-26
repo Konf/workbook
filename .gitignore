@@ -1,5 +1,5 @@
 *.pdf
-!workbook.pdf
+workbook.pdf
 *.pdf_tex
 *.log
 *.aux
