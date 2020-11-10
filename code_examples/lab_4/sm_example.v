@@ -17,7 +17,7 @@ always @(posedge clk or posedge rst) begin
         if (new_data) 
           state <= calc_cheksum;
 
-      calc_cheksum:
+      CALC_CHECKSUM:
         if (checksum_calc_complete)
           state <= SEND_DATA;
     
