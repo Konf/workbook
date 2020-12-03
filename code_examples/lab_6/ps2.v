@@ -48,24 +48,24 @@ always @(posedge clk_50 or posedge areset) begin
         IDLE:
         begin
           if(!ps2_dat)
-            state = RECEIVE_DATA;
+            state <= RECEIVE_DATA;
         end
 
         RECEIVE_DATA:
         begin
           if (count_bit == 8)
-            state =
+            state <=
             CHECK_PARITY_STOP_BITS;
         end
 
         CHECK_PARITY_STOP_BITS:
         begin
-          state = IDLE;
+          state <= IDLE;
         end
 
         default:
         begin
-          state = IDLE;
+          state <= IDLE;
         end
       endcase
     end
@@ -96,11 +96,12 @@ end
 always @(posedge clk_50 or posedge areset) begin
   if(areset)
     count_bit <= 4'b0;
-  else if (ps2_clk_negedge)
+  else if (ps2_clk_negedge) begin
     if(state == RECEIVE_DATA)
       count_bit <= count_bit + 4'b1;
-  else
-    count_bit <= 4'b0;
+    else
+      count_bit <= 4'b0;
+  end
 end
 
 endmodule

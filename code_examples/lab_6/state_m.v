@@ -13,24 +13,24 @@ always @(posedge clk_50 or posedge areset) begin
         IDLE:
         begin
           if(!ps2_dat)
-            state = RECEIVE_DATA;
+            state <= RECEIVE_DATA;
         end
 
         RECEIVE_DATA:
         begin
           if (count_bit == 8)
-            state =
+            state <=
             CHECK_PARITY_STOP_BITS;
         end
 
         CHECK_PARITY_STOP_BITS:
         begin
-          state = IDLE;
+          state <= IDLE;
         end
 
         default:
         begin
-          state = IDLE;
+          state <= IDLE;
         end
       endcase
     end
