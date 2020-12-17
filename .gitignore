@@ -1,4 +1,5 @@
 *.pdf
+!images/lab_7/DE1_Audio.pdf
 workbook.pdf
 *.pdf_tex
 *.log
