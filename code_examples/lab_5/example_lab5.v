@@ -34,6 +34,8 @@ assign fifo_re = (state == load);
 assign start_transaction = (state == transmit);
 
 fifo fifo_input_buffer(
+  .clk(clk),
+  .rst(rst)
   .we(we),
   .re(fifo_re),
   .data_in(data),
@@ -43,6 +45,8 @@ fifo fifo_input_buffer(
 );
   
 tansmitter my_transmitter(
+  .clk(clk),
+  .rst(rst),
   .start(start),
   .busy(busy),
   .data(data_from_fifo_for_transmitter),
